@@ -165,11 +165,12 @@ each(names, function(item, indice){
 
 function getUserById(arr,id,cb){
   for(i=0;i<arr.length;i++){
-    if(arr[i].id==id){
+    for(var prop in arr[i]){
+      if(arr[i][prop]=id){
       cb(arr[i])
+      }
     }
   }
-  
 }
 
 // Do not edit the code below.
